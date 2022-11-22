@@ -20,7 +20,7 @@ mkdir -p "${cache}/clamav-data"
 freshclam --config-file="${build}/config/clamav/freshclam.conf" --datadir="${cache}/clamav-data/" --log=/dev/stdout --quiet
 
 # Replace the old virus database
-rm -rf "${build}/.clamav-data"
-cp -rp "${cache}/clamav-data" "${build}/.clamav-data"
+rm -rf "${build}/clamav-data"
+cp -rp "${cache}/clamav-data" "${build}/clamav-data"
 
-echo "---> ClamAV virus database files are at ${build}/.clamav-data"
+echo "---> ClamAV virus database files are at ${build}/clamav-data"
