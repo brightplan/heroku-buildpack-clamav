@@ -12,7 +12,8 @@ cache="$2"
 set -e
 
 echo "---> Getting and installing ClamAV virus database files with build dir ${build} and cache dir ${cache}"
-mkdir -p logs
+echo "---> Current dir is `pwd`"
+mkdir -p /app/logs
 
 # Create a directory for the virus database
 mkdir -p "${cache}/clamav-data"
