@@ -11,7 +11,8 @@ cache="$2"
 # Stops the execution of the script if a command has an error 
 set -e
 
-echo "---> Getting and installing ClamAV virus database files"
+echo "---> Getting and installing ClamAV virus database files with build dir ${build} and cache dir ${cache}"
+mkdir -p logs
 
 # Create a directory for the virus database
 mkdir -p "${cache}/clamav-data"
